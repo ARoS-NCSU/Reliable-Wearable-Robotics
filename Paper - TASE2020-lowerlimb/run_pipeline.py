@@ -1,9 +1,9 @@
 from model_utils import TerrainRecognition, ProbabilityCalibration
 
 
-DataDir = '/tmp/hsperfdata_bzhong2/walking_intention_dataset_post_publish'
-FeaDir = '/tmp/hsperfdata_bzhong2/temp_features'
-ResultDir = '/tmp/hsperfdata_bzhong2/results'
+DataDir = '/path/to/dataset_folder'
+FeaDir = '/path/to/feature_folder'
+ResultDir = './results'
 
 train_sessions = [
     'subject_001/y19m09d01',
