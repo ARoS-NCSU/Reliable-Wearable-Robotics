@@ -1,6 +1,6 @@
 # Environmental Context Prediction for Lower Limb Prostheses with Uncertainty Quantification (T-ASE 2020)
 
-This is the implementation for our [IEEE T-ASE paper]().
+This is the example implementation for our [IEEE T-ASE paper]().
 
 ## Tested Environment 
 - Ubuntu 16.04 LTS
