@@ -3,7 +3,7 @@ from model_utils import TerrainRecognition, ProbabilityCalibration
 
 DataDir = '/path/to/dataset_folder'
 FeaDir = '/path/to/feature_folder'
-ResultDir = './results'
+ResultDir = '/path/to/result_folder'
 
 train_sessions = [
     'subject_001/y19m09d01',

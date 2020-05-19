@@ -1,4 +1,4 @@
-matDir = sprintf('./results');
+matDir = sprintf('/path/to/result_folder');
 % the method and device combinations to be evaluated and compared
 methods = { 'baye_mlp_single_cam', 'baye_gru_single_cam', 'baye_gru_single_cam', 'baye_gru_two_cam'}; 
 devices = {'rpi','rpi','tobii','both'};
