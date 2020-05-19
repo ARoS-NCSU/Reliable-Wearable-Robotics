@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-matDir = sprintf('../../../data/walking_intention_dataset_post/results');
+matDir = sprintf('./results');
 methods = { 'baye_mlp_single_cam', 'baye_gru_single_cam', 'baye_gru_single_cam', 'baye_gru_two_cam'}; 
 color = {'r', 'b', 'g', 'c'};
 devices = {'rpi','rpi','tobii','both'};
