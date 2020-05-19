@@ -40,8 +40,8 @@ class feature_extractor:
 
 
 def main():
-    DataPath = '/tmp/hsperfdata_bzhong2/walking_intention_dataset_post_publish'
-    FeaPath = '/tmp/hsperfdata_bzhong2/temp_features'
+    DataPath = '/path/to/dataset_folder'
+    FeaPath = '/path/to/feature_folder'
     sessions = [
         # subject_001
         'subject_001/y19m09d01', 'subject_001/y19m10d10_01',
