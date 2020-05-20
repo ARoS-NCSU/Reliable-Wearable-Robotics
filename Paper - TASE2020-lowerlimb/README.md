@@ -14,7 +14,7 @@ This is the example implementation for our [IEEE T-ASE paper]().
 
 
 ## Training & Testing
-- Step One: Download dataset from the [paper homepage](https://research.ece.ncsu.edu/aros/paper-tase2020-lowerlimb/) and unzip with unzip_dataset.py. 
+- Step One: Download dataset from the [paper homepage](https://research.ece.ncsu.edu/aros/paper-tase2020-lowerlimb/) and unzip the files. 
 - Step Two: Run extract_pretrained_feature.py to extract and save image features (please change the corresponding data and feature directory). 
 - Step Three: Run run_pipeline.py to train and evaluate terrain recognition and probability calibration networks (please change the corresponding data and feature directory). 
 - Step Four: Run plot_reliability_diagram.m and plot_prediction_accuracy.m to visualize the reliability diagrams of the calibrated probability and the prediction accuracy comparison. 
