@@ -23,10 +23,12 @@ This is the example implementation for our [IEEE T-ASE paper]().
 ## Citations
 If you find our work useful in your research, please consider citing:
 ```
-@inproceedings{,
-title = "Environmental Context Prediction for Lower Limb Prostheses with Uncertainty Quantification",
-author = "",
-booktitle = "",
-year = {2020},
-}
+@ARTICLE{zhongEnv2020,
+  author={B. {Zhong} and R. {Luiz da Silva} and M. {Li} and H. {Huang} and E. {Lobaton}},
+  journal={IEEE Transactions on Automation Science and Engineering}, 
+  title={Environmental Context Prediction for Lower Limb Prostheses With Uncertainty Quantification}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1-13},}
 ```
