@@ -48,7 +48,7 @@ If this repo is useful for your project, please consider citing our work:
   * For mechanical case design project please check [here](https://github.ncsu.edu/rdasilv2/RaspiCaseFiles/tree/master/Proj-ProstheticLeg).
   * Version 1:
 
-  <img src="https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/pics/IMG_20190614_074938058.jpg" width="250"  height="250">| <img src="https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/pics/IMG_20190614_074941604.jpg" width="250"  height="250">| <img src="https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/pics/IMG_20190614_074949320.jpg" width="250"  height="250">
+<img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074938058.jpg width="250"  height="250">| <img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074941604.jpg" width="250"  height="250">| <img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074949320.jpg" width="250"  height="250">
 
 # Prototype parts
  * One [Raspberry](https://www.canakit.com/raspberry-pi-3-model-b-plus-basic-kit.html) Pi Model 3.
@@ -239,5 +239,5 @@ Choose the configuration as you wish, mind your data collection cost-benefit.
 	```
  * Visualization sample
  
- ![](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/pics/ezgif.com-optimize.gif)
+ ![](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/ezgif.com-optimize.gif)
  
