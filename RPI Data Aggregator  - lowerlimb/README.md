@@ -9,14 +9,14 @@
 
 If this repo is useful for your project, please consider citing our work:
 ```
-@ARTICLE{8626514,
-  author={K. {Zhang} and C. {Xiong} and W. {Zhang} and H. {Liu} and D. {Lai} and Y. {Rong} and C. {Fu}},
-  journal={IEEE Transactions on Neural Systems and Rehabilitation Engineering}, 
-  title={Environmental Features Recognition for Lower Limb Prostheses Toward Predictive Walking}, 
-  year={2019},
-  volume={27},
-  number={3},
-  pages={465-476},}
+@ARTICLE{Zhong2020,
+  author={B. {Zhong} and R. {Luiz da Silva} and M. {Li} and H. {Huang} and E. {Lobaton}},
+  journal={IEEE Transactions on Automation Science and Engineering}, 
+  title={Environmental Context Prediction for Lower Limb Prostheses With Uncertainty Quantification}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1-13},}
 ```
 
 # Motivation for current design
