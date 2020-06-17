@@ -8,6 +8,9 @@
  * [Python PiCamera](https://picamera.readthedocs.io/en/release-1.12/install.html)
 
 If this repo is useful for your project, please consider citing our work:
+
+*B. Zhong, R. Luiz da Silva, M. Li, H. Huang and E. Lobaton, "Environmental Context Prediction for Lower Limb Prostheses With Uncertainty Quantification," in IEEE Transactions on Automation Science and Engineering, doi: 10.1109/TASE.2020.2993399.*
+
 ```
 @ARTICLE{Zhong2020,
   author={B. {Zhong} and R. {Luiz da Silva} and M. {Li} and H. {Huang} and E. {Lobaton}},
