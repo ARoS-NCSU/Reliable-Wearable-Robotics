@@ -28,7 +28,7 @@ If this repo is useful for your project, please consider citing our work:
   * This repo is for a prototype for data collection. The data is required to have video synchronized with IMU values. The project demanding such data collection is the [prosthetic leg project](https://ieeexplore.ieee.org/abstract/document/8512614).
   * Use of Adafruit BNO055 board, due to it widespread use with hobbysts and scientific community there are plenty of forums and documentation exploring possible applications and issues found when using it. However, it is important to use the link [above](#bno055) which refers to an old tutorial of adafruit that uses the IMU with serial port instead of I2C. The latter one has problems of compatibility and clock speed on the raspberry Pi.
   * Use of raspberry Pi 3 Model B, same as above and also enables portability for data collection with reasonable computational power.
-  * Use of USB camera, enables applications with SLAM (attempted code can be found [here](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/tree/master/USBCamera) and analysis [here](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/previous_versions.md))
+  * Use of USB camera, enables applications with SLAM (attempted code can be found [here](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/tree/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/USBCamera) and analysis [here](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/previous_versions.md))
   * PiCamera, better handled by raspberry Pi for CPU intense tasks (initially not applicable for SLAM since it's a rolling shutter camera, so its frames have drift for moving scenes)
   * Current software design
     * Python, expandable, easy to get started with, natural extension to machine learning applications
@@ -37,15 +37,15 @@ If this repo is useful for your project, please consider citing our work:
     
 # System notes:
   * BNO055 has to be used in non fusion mode in order to provide the readings of raw data from accelerometer and gyroscope. Therefore, the chip was configured to work in this mode and it was tested with sampling frequencies of Acc: 125Hz, Gyro: 116Hz. This board offers sampling rates up to 1000Hz but BNO055 does not offer a way to indicate that new data has arrived. Thus one has to manually check if the read values have changed to then save the reading.
-  * Configurations of BNO055 have to be done separately from the actual reading script for reasons not discovered. Having the configurations and readings in the same file makes BNO055 return errors consistently. Configuration file can be found [here](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/BNO055/configure_bno055.py).
+  * Configurations of BNO055 have to be done separately from the actual reading script for reasons not discovered. Having the configurations and readings in the same file makes BNO055 return errors consistently. Configuration file can be found [here](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/BNO055/configure_bno055.py).
   * According to the data sheet of BNO055, at power on, the dafault values are restored. Thus, every time the raspberry Pi is powered on and so BNO055, it is needed to configure the IMU.
   * Current system obtains IMU data at about 98Hz. 
   * The system was tested on frame rates from 15 to 30 fps and different image resolutions. The choice of frame rate is contingent of allowed dropped frames percentage. Please see [Performance Notes](#performance) for further details.
-  * The recording is made with a [python script](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/BNO055/IMU_reader.py) that collects data from the IMU and a customized version of raspivid which saves the epoch timestamp of the video frames to a file, further details [below](#setup). Both scripts are executed from [this](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/BNO055/aggregator.sh) bash file.
+  * The recording is made with a [python script](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/BNO055/IMU_reader.py) that collects data from the IMU and a customized version of raspivid which saves the epoch timestamp of the video frames to a file, further details [below](#setup). Both scripts are executed from [this](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/BNO055/aggregator.sh) bash file.
   * A switch is required at GPIO 23 to stop the system after 2 consecutive pushes apart for at least for 0.5s. [Connections](https://www.hackster.io/hardikrathod/push-button-with-raspberry-pi-6b6928).
   * An LED may be installed for feedback purposes at GPIO 24. [Connections](https://www.hackster.io/hardikrathod/push-button-with-raspberry-pi-6b6928).   
   * The system uses a VeryGood battery (this is the brand name) that has a USB power cord with a push button on it.
-  * For mechanical case design project please check [here](https://github.ncsu.edu/rdasilv2/RaspiCaseFiles/tree/master/Proj-ProstheticLeg).
+  * For mechanical case design project please check [here](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/tree/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/Mechanical%20data).
   * Version 1:
 
 <img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074938058.jpg width="250"  height="250">| <img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074941604.jpg" width="250"  height="250">| <img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074949320.jpg" width="250"  height="250">
@@ -85,14 +85,14 @@ If this repo is useful for your project, please consider citing our work:
    |GND | 6|
    
  * Install the required packages [above](#required). For adafruit tutorial, make sure that at simpletest.py script you use serial0 instead of ttyAMA0 (as they incorrectly show in the tutorial).
- * Make sure that the [aggregator file](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/BNO055/aggregator.sh) points to the correct directory where the [IMUreader](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/BNO055/IMU_reader.py) file is.
- * Make sure you configured in the [aggregator file](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/BNO055/aggregator.sh) your desired video resolution and frame rate by changing the following three lines:
+ * Make sure that the [aggregator file](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/BNO055/aggregator.sh) points to the correct directory where the [IMUreader](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/BNO055/IMU_reader.py) file is.
+ * Make sure you configured in the [aggregator file](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/BNO055/aggregator.sh) your desired video resolution and frame rate by changing the following three lines:
  ```bash
 wid="1280" #video width
 hei="720" #video height
 fps_v="30" # frame rate
 ```
- * Make the [aggregator.sh](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/BNO055/aggregator.sh) start from boot by editing the rc.local file as the following:
+ * Make the [aggregator.sh](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/BNO055/aggregator.sh) start from boot by editing the rc.local file as the following:
  ```bash
  sudo nano /etc/rc.local
  ```
@@ -138,7 +138,7 @@ static void encoder_buffer_callback(MMAL_PORT_T *port, MMAL_BUFFER_HEADER_T *buf
             mmal_buffer_header_mem_unlock(buffer);
 ```
    * compile it (./buildme)
-   * Download the [continue_button.py](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/BNO055/continue_button.py) script, in order to allow a clean shutdown of the system
+   * Download the [continue_button.py](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/BNO055/continue_button.py) script, in order to allow a clean shutdown of the system
 
 # <a name="modes"></a>Feedback modes:
     
@@ -163,7 +163,7 @@ static void encoder_buffer_callback(MMAL_PORT_T *port, MMAL_BUFFER_HEADER_T *buf
  
 # <a name="performance"></a> Performance Notes 
 
-Please find the performance analysis for previous versions [here](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/previous_versions.md)
+Please find the performance analysis for previous versions [here](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/previous_versions.md)
 
 The current system has been tested in the following 4 different configurations:
 
@@ -200,7 +200,7 @@ Choose the configuration as you wish, mind your data collection cost-benefit.
 
 # Data Visualization
 
- * A matlab [file](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/Data_Visualization_Tool/visualize_data_lower_limb.m) is available for data visualization. Please refer to its [directory](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/tree/master/Data_Visualization_Tool). Change the paths in the [run_SetupDirectories](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/Data_Visualization_Tool/visualize_data_lower_limb.m) file accordingly.
+ * A matlab [file](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/Data_Visualization_Tool/visualize_data_lower_limb.m) is available for data visualization. Please refer to its [directory](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/tree/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/Data_Visualization_Tool). Change the paths in the [run_SetupDirectories](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/Data_Visualization_Tool/visualize_data_lower_limb.m) file accordingly.
  * Convert the file from .h264 to .avi (or .mp4) using MP4Box for raspberry pi:
  	* Install gpac (to have MP4Box):
 	```bash
