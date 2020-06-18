@@ -47,6 +47,7 @@ If this repo is useful for your project, please consider citing our work:
   * The system uses a VeryGood battery (this is the brand name) that has a USB power cord with a push button on it.
   * For mechanical case design project please check [here](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/tree/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/Mechanical%20data).
   * Version 1:
+  
   <img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074938058.jpg width="250"  height="250">|
 	<img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074941604.jpg" width="250"  height="250">| 
 	<img src="https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMG_20190614_074949320.jpg" width="250"  height="250">
