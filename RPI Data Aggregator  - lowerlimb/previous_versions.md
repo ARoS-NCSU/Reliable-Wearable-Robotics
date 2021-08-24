@@ -101,13 +101,13 @@ Use openCV with PiCamera to paralleize camera reading and frames storage (more o
 **Compare data collection system IMU to another IMU data for sanity testing**
    * The comparison can be seen in the following pictures. The x,y axis from one IMU was 90^o shifted from the other, due to a misplacement in the position of the sensors.
   * General view Accelerometer:
-      ![alt text](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/pics/IMUraspi_comparison1.png)
+      ![alt text](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMUraspi_comparison1.png)
   * Zoom in:
-      ![alt text](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/pics/IMUraspi_comparison1_zoom.png)
+      ![alt text](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMUraspi_comparison1_zoom.png)
   * General view Gyroscope:
-      ![alt text](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/pics/IMUraspi_comparison2.png)
+      ![alt text](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMUraspi_comparison2.png)
   * Zoom in:
-      ![alt text](https://github.ncsu.edu/rdasilv2/ARoSDataAggregator/blob/master/pics/IMUraspi_comparison2_zoom.png)
+      ![alt text](https://github.com/ARoS-NCSU/Reliable-Wearable-Robotics/blob/master/RPI%20Data%20Aggregator%20%20-%20lowerlimb/pics/IMUraspi_comparison2_zoom.png)
       
   * Observations:
     * Some samples are being recorded twice from the ADAfruit. Each read sample could be compared to the previous one to avoid this problem.
